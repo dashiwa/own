@@ -1,16 +1,8 @@
 <?php
 
 // index.php
-$connection = new PDO("mysql:host=db;dbname=default", 'root', 'root');
+require_once 'model.php';
 
-$result = $connection->query('SELECT id, title FROM post');
+$posts = get_all_posts();
 
-$posts = [];
-while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-  $posts[] = $row;
-}
-
-$connection = null;
-
-// include the HTML presentation code
 require 'templates/list.php';
