@@ -1,0 +1,8 @@
+{
+  "require": {
+    "symfony/http-foundation": "^4.0"
+  },
+  "autoload": {
+    "files": ["model.php","controllers.php"]
+  }
+}
