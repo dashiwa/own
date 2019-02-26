@@ -6,7 +6,7 @@
 <ul>
   <?php foreach ($posts as $post): ?>
       <li>
-          <a href="/show.php?id=<?= $post['id'] ?>">
+          <a href="show.php?id=<?= $post['id'] ?>">
             <?= $post['title'] ?>
           </a>
       </li>
