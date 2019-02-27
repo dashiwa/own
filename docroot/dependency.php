@@ -27,9 +27,9 @@ class User
 {
   protected $storage;
 
-  function __construct($storageOptions)
+  function __construct($storage)
   {
-    $this->storage = new SessionStorage($storageOptions['session_name']);
+    $this->storage = $storage;
   }
 
   function setLanguage($language)
@@ -45,8 +45,8 @@ class User
   // ...
 }
 
-define('STORAGE_SESSION_NAME', 'SESSION_ID');
+$storage = new SessionStorage('SESSION_ID');
+$user = new User($storage);
 
-$user = new User(array('session_name' => 'SESSION_ID'));
 $user->setLanguage('fr');
 $user_language = $user->getLanguage();
