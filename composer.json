@@ -3,5 +3,10 @@
         "symfony/http-foundation": "^4.2",
         "symfony/routing": "^4.2",
         "symfony/http-kernel": "^4.2"
+    },
+  "autoload" : {
+    "psr-0": {
+      "Simplex" : "src/"
     }
+  }
 }
